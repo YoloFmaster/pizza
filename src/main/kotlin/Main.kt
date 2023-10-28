@@ -8,17 +8,23 @@ fun main() {
         167.9,255.89
     )
     val pizzaRestaurantMoscow = PizzaRestaurantMoscow(
-        600.8,981.67,
-        546.23, 1234.56
+        400.8,375.67,
+        846.23, 345.56
     )
+    val pizzaRestaurantPskov = PizzaRestaurantPskov(
+        120.50, 110.70,
+        100.90, 135.70
+    )
+
     val currentPizzaCity: PizzaCity
 
     println("Добрый день.В каком городе вы находитесь?")
-    println("Санкт-Петербург - 1\nМосква - 2\nОтменить заказ - 3")
+    println("Санкт-Петербург - 1\nМосква - 2\nПсков - 3\nОтменить заказ - 4")
     when(readln()){
         "1" -> currentPizzaCity = pizzaRestaurantPeter
         "2" -> currentPizzaCity = pizzaRestaurantMoscow
-        "3" ->{
+        "3" -> currentPizzaCity = pizzaRestaurantPskov
+        "4" ->{
             currentPizzaCity = pizzaRestaurantMoscow
             buy = false
         }
@@ -46,6 +52,5 @@ fun main() {
         println("Если хотите закончить день - exit")
         if (readln() == "exit") buy = false
         println()
-
     }
 }
