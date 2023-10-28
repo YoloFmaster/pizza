@@ -46,5 +46,6 @@ fun main() {
         println("Если хотите закончить день - exit")
         if (readln() == "exit") buy = false
         println()
+
     }
 }
